@@ -1,0 +1,13 @@
+diff --git a/glom/core.py b/glom/core.py
+index d102c2a..83366a3 100644
+--- a/glom/core.py
++++ b/glom/core.py
+@@ -2588,6 +2588,8 @@ def arg_val(target, arg, scope):
+     evaluate an argument to find its value
+     (arg_val phonetically similar to "eval" -- evaluate as an arg)
+     """
++    if type(arg) is str:  # fast path: literal strings evaluate to themselves
++        return arg
+     mode = scope[MIN_MODE]
+     scope[MIN_MODE] = _ArgValuator().mode
+     result = scope[glom](target, arg, scope)

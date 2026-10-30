@@ -1,0 +1,68 @@
+{
+  "command": "/tmp/glom-base/.venv/bin/python benchmark/bench.py --impl baseline --out benchmark/baseline.json",
+  "cpu": "AMD EPYC 7K62 48-Core Processor",
+  "glom_file": "/tmp/glom-base/glom/__init__.py",
+  "impl": "baseline",
+  "memory_total_kb": 3812564,
+  "peak_rss_kb": 24392,
+  "peak_rss_kb_time_v": 24392,
+  "python": "3.12.3",
+  "samples": 5,
+  "scales": {
+    "large": {
+      "depth": 8,
+      "iters_per_sample": 20000,
+      "median_ns_per_call": 45078.12375668436,
+      "p25_ns_per_call": 44370.76628673822,
+      "p75_ns_per_call": 45491.59475136548,
+      "rel_std_pct": 1.3875963100816033,
+      "timed_samples_ns": [
+        45555.563271045685,
+        45491.59475136548,
+        45078.12375668436,
+        44212.477235123515,
+        44370.76628673822
+      ]
+    },
+    "medium": {
+      "depth": 5,
+      "iters_per_sample": 15000,
+      "median_ns_per_call": 32544.46464901169,
+      "p25_ns_per_call": 32515.30332490802,
+      "p75_ns_per_call": 32650.39746960004,
+      "rel_std_pct": 0.46670467536921595,
+      "timed_samples_ns": [
+        32321.48547346393,
+        32544.46464901169,
+        32515.30332490802,
+        32719.641489287216,
+        32650.39746960004
+      ]
+    },
+    "small": {
+      "depth": 3,
+      "iters_per_sample": 10000,
+      "median_ns_per_call": 24014.850985258818,
+      "p25_ns_per_call": 23920.166213065386,
+      "p75_ns_per_call": 24144.16470564902,
+      "rel_std_pct": 0.6118019669603201,
+      "timed_samples_ns": [
+        23920.166213065386,
+        23832.24731311202,
+        24144.16470564902,
+        24180.38477189839,
+        24014.850985258818
+      ]
+    }
+  },
+  "seed": 20261031,
+  "upstream": "mahmoud/glom",
+  "upstream_commit": "fd70d3051a6a1bcb5152ec2d8e2cdc8e852f95e6",
+  "upstream_commit_date": "2026-09-08",
+  "upstream_tests": {
+    "command": "cd /tmp/glom-base && PATH=\"$PWD/.venv/bin:$PATH\" .venv/bin/python -m pytest -q",
+    "failed": 0,
+    "result": "202 passed, 2 warnings in 0.43s"
+  },
+  "warmup": 3
+}

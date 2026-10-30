@@ -1,0 +1,68 @@
+{
+  "command": "/tmp/glom-opt/.venv/bin/python benchmark/bench.py --impl optimized --out benchmark/optimized.json",
+  "cpu": "AMD EPYC 7K62 48-Core Processor",
+  "glom_file": "/tmp/glom-opt/glom/__init__.py",
+  "impl": "optimized",
+  "memory_total_kb": 3812564,
+  "peak_rss_kb": 24392,
+  "peak_rss_kb_time_v": 24392,
+  "python": "3.12.3",
+  "samples": 5,
+  "scales": {
+    "large": {
+      "depth": 8,
+      "iters_per_sample": 20000,
+      "median_ns_per_call": 16298.36990032345,
+      "p25_ns_per_call": 16241.083410568535,
+      "p75_ns_per_call": 16335.331182926893,
+      "rel_std_pct": 0.37207885827456366,
+      "timed_samples_ns": [
+        16238.945396617057,
+        16298.36990032345,
+        16379.188559949396,
+        16335.331182926893,
+        16241.083410568535
+      ]
+    },
+    "medium": {
+      "depth": 5,
+      "iters_per_sample": 15000,
+      "median_ns_per_call": 12586.101858566204,
+      "p25_ns_per_call": 12528.023465226095,
+      "p75_ns_per_call": 12867.758392045895,
+      "rel_std_pct": 1.8948182637429423,
+      "timed_samples_ns": [
+        13038.7960622708,
+        12867.758392045895,
+        12528.023465226095,
+        12586.101858566204,
+        12485.039451469976
+      ]
+    },
+    "small": {
+      "depth": 3,
+      "iters_per_sample": 10000,
+      "median_ns_per_call": 10166.98949970305,
+      "p25_ns_per_call": 10157.81331807375,
+      "p75_ns_per_call": 10202.222596853971,
+      "rel_std_pct": 0.49531809456977527,
+      "timed_samples_ns": [
+        10166.98949970305,
+        10265.267128124833,
+        10202.222596853971,
+        10136.204678565264,
+        10157.81331807375
+      ]
+    }
+  },
+  "seed": 20261031,
+  "upstream": "mahmoud/glom",
+  "upstream_commit": "fd70d3051a6a1bcb5152ec2d8e2cdc8e852f95e6",
+  "upstream_commit_date": "2026-09-08",
+  "upstream_tests": {
+    "command": "cd /tmp/glom-opt && PATH=\"$PWD/.venv/bin:$PATH\" .venv/bin/python -m pytest -q",
+    "failed": 0,
+    "result": "202 passed, 2 warnings in 0.42s"
+  },
+  "warmup": 3
+}

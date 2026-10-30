@@ -1,0 +1,12 @@
+{
+  "check_ok": true,
+  "depth": 8,
+  "elapsed_s": 0.9111112654209137,
+  "impl": "baseline",
+  "index": 3,
+  "iters": 20000,
+  "kind": "timed",
+  "ns_per_call": 45555.563271045685,
+  "scale": "large",
+  "seed": 20261031
+}
