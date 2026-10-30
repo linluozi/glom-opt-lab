@@ -57,11 +57,11 @@ The upstream suite needs its declared test extra (PyYAML); without it the two YA
 Run from the root of this repository. The three commands build the baseline and patched checkouts in `/tmp`, run the upstream and differential tests, and rerun both benchmarks.
 
 ```bash
-git clone --depth=1 git@github-linluozi:mahmoud/glom.git /tmp/glom-opt && git -C /tmp/glom-opt apply "$PWD/patch.diff" && python3 -m venv /tmp/glom-opt/.venv && /tmp/glom-opt/.venv/bin/pip -q install -e /tmp/glom-opt pytest PyYAML
+rm -rf /tmp/glom-opt && git clone --depth=1 git@github-linluozi:mahmoud/glom.git /tmp/glom-opt && git -C /tmp/glom-opt apply "$PWD/patch.diff" && python3 -m venv /tmp/glom-opt/.venv && /tmp/glom-opt/.venv/bin/pip -q install -e /tmp/glom-opt pytest PyYAML
 ```
 
 ```bash
-git clone --depth=1 git@github-linluozi:mahmoud/glom.git /tmp/glom-base && python3 -m venv /tmp/glom-base/.venv && /tmp/glom-base/.venv/bin/pip -q install -e /tmp/glom-base pytest PyYAML && (cd /tmp/glom-base && PATH="$PWD/.venv/bin:$PATH" .venv/bin/python -m pytest -q) && (cd /tmp/glom-opt && PATH="$PWD/.venv/bin:$PATH" .venv/bin/python -m pytest -q) && GLOM_BASE=/tmp/glom-base GLOM_OPT=/tmp/glom-opt /tmp/glom-opt/.venv/bin/python -m pytest -q tests/test_diff.py
+rm -rf /tmp/glom-base && git clone --depth=1 git@github-linluozi:mahmoud/glom.git /tmp/glom-base && python3 -m venv /tmp/glom-base/.venv && /tmp/glom-base/.venv/bin/pip -q install -e /tmp/glom-base pytest PyYAML && (cd /tmp/glom-base && PATH="$PWD/.venv/bin:$PATH" .venv/bin/python -m pytest -q) && (cd /tmp/glom-opt && PATH="$PWD/.venv/bin:$PATH" .venv/bin/python -m pytest -q) && GLOM_BASE=/tmp/glom-base GLOM_OPT=/tmp/glom-opt /tmp/glom-opt/.venv/bin/python -m pytest -q tests/test_diff.py
 ```
 
 ```bash
