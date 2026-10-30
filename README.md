@@ -27,7 +27,7 @@ if type(arg) is str:  # fast path: literal strings evaluate to themselves
 | medium | 5 | 32,544 ns/call | 12,586 ns/call | 2.59x |
 | large | 8 | 45,078 ns/call | 16,298 ns/call | 2.77x |
 
-Median of the three speedups: **2.59x**. Maximum relative standard deviation among timed samples was 1.9% (medium baseline); no scale exceeded 10%, so no noise caveat is needed beyond ordinary Python interpreter jitter.
+Median of the three speedups: **2.59x**. Maximum relative standard deviation among timed samples was 1.9% (medium optimized); no scale exceeded 10%, so no noise caveat is needed beyond ordinary Python interpreter jitter.
 
 This is a microbenchmark of the path-access hot path the patch targets, not an end-to-end application claim.
 
